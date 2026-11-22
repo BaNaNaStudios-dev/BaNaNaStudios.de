@@ -1,4 +1,3 @@
-
 const newsArticles = [
     {
         id: "programming-started",
@@ -164,36 +163,14 @@ function renderNewsList() {
         const date = formatArticleDate(article.date, language);
 
         return `
-            <article class="news-card">
+            <a href="article.html?id=${article.id}"
+               class="news-card"
+               style="display:block; padding:26px 28px;"
+               aria-label="${item.title}">
 
-                <img
-                    src="${article.image}"
-                    alt="${item.title}"
-                    class="news-image"
-                >
+                <h3 style="margin:0; font-size:22px;">${item.title}</h3>
 
-                <div class="news-card-content">
-
-                    <span class="news-category">
-                        ${item.category}
-                    </span>
-
-                    <h3>${item.title}</h3>
-
-                    <p class="news-date">${date}</p>
-
-                    <p class="news-description">
-                        ${item.description}
-                    </p>
-
-                    <a href="article.html?id=${article.id}"
-                       class="text-link">
-                        ${item.readMore}
-                    </a>
-
-                </div>
-
-            </article>
+            </a>
         `;
     }).join("");
 }
