@@ -133,12 +133,10 @@ const translations = {
             intro: "Ein erster Blick auf unsere Vision, Stimmungen und Spielwelt-Atmosphären.",
             sectionKicker: "BEKOMMENDE INHALTE",
             sectionHeading: "Unsere Trailer",
-            cardTag: "Gameplay Reveal",
+            cardTag: "COMING SOON",
             cardTitle: "Nature Chaos",
-            cardText: "Ein erster Blick in die Welt, das Survival-System und die Magie der Natur.",
+            cardText: "COMING SOON",
             teaserTag: "Teaser",
-            teaserTitle: "Project Echo",
-            teaserText: "Eine atmosphärische Vorschau auf eine Welt voller Geheimnisse und ungeahnter Risiken."
         },
         news: {
             kicker: "AKTUELLE UPDATES",
