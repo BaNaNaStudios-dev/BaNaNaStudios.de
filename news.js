@@ -1,187 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BaNaNa Studios news archive on bananastudios.de.">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://bananastudios.de/news.html">
+    <meta property="og:title" content="News Archive | bananastudios.de">
+    <meta property="og:description" content="BaNaNa Studios news archive on bananastudios.de.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bananastudios.de/news.html">
+    <title>News Archive | bananastudios.de</title>
+    <link rel="icon" href="12.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-const newsArticles = [
-    {
-        id: "nature-chaos-update",
-        date: "2026-11-17",
-        image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85",
-        translations: {
-            en: {
-                title: "Nature Chaos – Development Update",
-                category: "DEVELOPMENT",
-                description: "Discover the latest development progress of Nature Chaos.",
-                content: `
-                    <p>Welcome to our latest Nature Chaos development update!</p>
-                    <p>Nature Chaos is a survival adventure game where players
-                    explore islands, collect resources and try to survive.</p>
-                    <p>We are working on bringing this world to life.
-                    More information will follow soon.</p>
-                `,
-                readMore: "Read More →",
-                backToNews: "← Back to News",
-                published: "Published: "
-            },
-            de: {
-                title: "Nature Chaos – Entwicklungs-Update",
-                category: "ENTWICKLUNG",
-                description: "Erfahre den neuesten Fortschritt bei der Entwicklung von Nature Chaos.",
-                content: `
-                    <p>Willkommen zu unserem neuesten Entwicklungs-Update für Nature Chaos!</p>
-                    <p>Nature Chaos ist ein Survival-Abenteuer, in dem Spieler Inseln erkunden,
-                    Ressourcen sammeln und versuchen zu überleben.</p>
-                    <p>Wir arbeiten daran, diese Welt zum Leben zu erwecken.
-                    Weitere Informationen folgen bald.</p>
-                `,
-                readMore: "Mehr lesen →",
-                backToNews: "← Zurück zu News",
-                published: "Veröffentlicht: "
-            }
-        }
-    },
-    {
-        id: "banana-studios",
-        date: "2026-11-12",
-        image: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=85",
-        translations: {
-            en: {
-                title: "The Future of BaNaNa Studios",
-                category: "STUDIO NEWS",
-                description: "A look at the future projects of BaNaNa Studios.",
-                content: `
-                    <p>Welcome to BaNaNa Studios!</p>
-                    <p>We are focused on creating games and bringing new ideas
-                    to life through programming and creativity.</p>
-                    <p>Stay tuned for more updates.</p>
-                `,
-                readMore: "Read More →",
-                backToNews: "← Back to News",
-                published: "Published: "
-            },
-            de: {
-                title: "Die Zukunft von BaNaNa Studios",
-                category: "STUDIO-NEWS",
-                description: "Ein Blick auf die künftigen Projekte von BaNaNa Studios.",
-                content: `
-                    <p>Willkommen bei BaNaNa Studios!</p>
-                    <p>Wir konzentrieren uns auf die Entwicklung von Spielen und auf die Umsetzung neuer Ideen
-                    durch Programmierung und Kreativität.</p>
-                    <p>Bleibt dran für weitere Updates.</p>
-                `,
-                readMore: "Mehr lesen →",
-                backToNews: "← Zurück zu News",
-                published: "Veröffentlicht: "
-            }
-        }
-    }
-];
+<header class="header">
+    <a href="index.html" class="logo" style="display:inline-flex; align-items:center; gap:10px;"><img src="12.png" alt="BaNaNa Studios Logo" style="height:36px; width:auto; border-radius:8px;"><span style="color:inherit;">BaNaNa <span>Studios</span></span></a>
 
-function getCurrentLanguage() {
-    return localStorage.getItem("banana-language") || "de";
-}
+    <nav class="navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="games.html" data-i18n="nav.games">Games</a>
+        <a href="trailers.html" data-i18n="nav.trailers">Trailers</a>
+        <a href="news.html" data-i18n="nav.news">News</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="downloads.html" data-i18n="nav.downloads">Downloads</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+    </nav>
 
-function formatArticleDate(dateString, language) {
-    const locale = language === "de" ? "de-DE" : "en-GB";
+    <div class="header-tools">
+        <label class="settings-select">
+            <span>Theme</span>
+            <select id="theme-select">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </label>
 
-    return new Date(dateString + "T12:00:00").toLocaleDateString(locale, {
-        day: "2-digit",
-        month: "long",
-        year: "numeric"
-    });
-}
+        <label class="settings-select">
+            <span>Language</span>
+            <select id="language-select">
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+            </select>
+        </label>
+    </div>
+</header>
 
-function renderNewsList() {
-    const newsContainer = document.getElementById("news-container");
-    const language = getCurrentLanguage();
+<main class="page-shell">
+    <section class="page-hero">
+        <p class="small-title" id="page-kicker" data-i18n="news.kicker">LATEST UPDATES</p>
+        <h1 id="page-title" data-i18n="news.title">Newsarchiv</h1>
+        <p class="page-intro" id="page-intro" data-i18n="news.intro">
+            Alle aktuellen Nachrichten, Entwicklungen und Studio-Updates in einem klaren Überblick.
+        </p>
+    </section>
 
-    if (!newsContainer) {
-        return;
-    }
+    <section class="section">
+        <div class="news-grid" id="news-container"></div>
+    </section>
+</main>
 
-    newsContainer.innerHTML = newsArticles.map(article => {
-        const item = article.translations[language] || article.translations.en;
-        const date = formatArticleDate(article.date, language);
+<footer class="footer">
+    <a href="index.html" class="logo">BaNaNa <span>Studios</span></a>
+    <p>BaNaNa Studios</p>
+    <p>Official Website</p>
+    <p>bananastudios.de</p>
+</footer>
 
-        return `
-            <article class="news-card">
-
-                <img
-                    src="${article.image}"
-                    alt="${item.title}"
-                    class="news-image"
-                >
-
-                <div class="news-card-content">
-
-                    <span class="news-category">
-                        ${item.category}
-                    </span>
-
-                    <h3>${item.title}</h3>
-
-                    <p class="news-date">${date}</p>
-
-                    <p class="news-description">
-                        ${item.description}
-                    </p>
-
-                    <a href="article.html?id=${article.id}"
-                       class="text-link">
-                        ${item.readMore}
-                    </a>
-
-                </div>
-
-            </article>
-        `;
-    }).join("");
-}
-
-function renderArticle() {
-    const articleContainer = document.getElementById("article-container");
-    const language = getCurrentLanguage();
-
-    if (!articleContainer) {
-        return;
-    }
-
-    const params = new URLSearchParams(window.location.search);
-    const articleId = params.get("id");
-    const article = newsArticles.find(item => item.id === articleId);
-
-    if (!article) {
-        articleContainer.innerHTML = `
-            <h1>Article not found</h1>
-            <a href="news.html">Back to News</a>
-        `;
-        return;
-    }
-
-    const item = article.translations[language] || article.translations.en;
-    const date = formatArticleDate(article.date, language);
-
-    document.title = item.title + " – BaNaNa Studios";
-
-    articleContainer.innerHTML = `
-        <p class="small-title">${item.category}</p>
-        <h1>${item.title}</h1>
-        <p class="article-date">${item.published}${date}</p>
-
-        <img src="${article.image}"
-             alt="${item.title}"
-             class="article-image">
-
-        <div class="article-content">
-            ${item.content}
-        </div>
-
-        <a href="news.html" class="text-link">
-            ${item.backToNews}
-        </a>
-    `;
-}
-
-renderNewsList();
-renderArticle();
-window.addEventListener("languagechange", () => {
-    renderNewsList();
-    renderArticle();
-});
+<script src="news.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
