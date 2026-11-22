@@ -1,4 +1,3 @@
-
 /* =========================
    BANANA STUDIOS
    JAVASCRIPT
@@ -303,11 +302,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.1 });
 
     sections.forEach(section => observer.observe(section));
-
-    const footerText = document.querySelector(".footer p");
-    if (footerText) {
-        footerText.textContent = `© ${new Date().getFullYear()} BaNaNa Studios. All rights reserved.`;
-    }
 
     const savedTheme = localStorage.getItem("banana-theme") || "dark";
     const savedLanguage = localStorage.getItem("banana-language") || "de";
