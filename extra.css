@@ -1,0 +1,183 @@
+/* =========================
+   BANANA STUDIOS
+   Zusatz-Styles fuer Downloads & Support
+========================= */
+
+.support-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.support-tabs a {
+    padding: 8px 18px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.support-tabs a:hover {
+    border-color: var(--accent-strong);
+    color: var(--accent-strong);
+}
+
+.faq-list {
+    display: grid;
+    gap: 12px;
+    max-width: 820px;
+}
+
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 22px;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.faq-item p {
+    color: var(--muted);
+    margin-top: 10px;
+}
+
+.info-box {
+    max-width: 820px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px 26px;
+    color: var(--muted);
+}
+
+.info-box strong {
+    color: var(--text);
+}
+
+.contact-mails {
+    margin-top: 14px;
+    display: grid;
+    gap: 4px;
+}
+
+.contact-mails a {
+    color: var(--accent-strong);
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.form-card {
+    max-width: 820px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 30px;
+}
+
+.form-row {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.form-row label {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    width: 100%;
+    background: var(--background);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font: inherit;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: var(--accent-strong);
+}
+
+.form-row textarea {
+    min-height: 170px;
+    resize: vertical;
+}
+
+.form-hint {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.form-status {
+    margin-top: 16px;
+    font-weight: 700;
+}
+
+.form-status.ok {
+    color: var(--accent-strong);
+}
+
+.form-status.err {
+    color: #ff6b6b;
+}
+
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    height: 0;
+    overflow: hidden;
+}
+
+button.button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button.button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.coming-soon-box {
+    max-width: 820px;
+    min-height: 260px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 40px 28px;
+}
+
+.coming-soon-box h3 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--accent-strong);
+    margin: 6px 0 10px;
+}
+
+.coming-soon-box p {
+    color: var(--muted);
+}
