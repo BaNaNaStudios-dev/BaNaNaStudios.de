@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support, FAQ and help for BaNaNa Studios.">
+    <meta name="theme-color" content="#0f172a">
+    <title>Support | BaNaNa Studios</title>
+    <link rel="icon" href="12.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo" style="display:inline-flex; align-items:center; gap:10px;"><img src="12.png" alt="BaNaNa Studios Logo" style="height:36px; width:auto; border-radius:8px;"><span style="color:inherit;">BaNaNa <span>Studios</span></span></a>
+
+    <nav class="navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="games.html" data-i18n="nav.games">Games</a>
+        <a href="trailers.html" data-i18n="nav.trailers">Trailers</a>
+        <a href="news.html" data-i18n="nav.news">News</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="downloads.html" data-i18n="nav.downloads">Downloads</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+    </nav>
+
+    <div class="header-tools">
+        <label class="settings-select">
+            <span>Theme</span>
+            <select id="theme-select">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </label>
+
+        <label class="settings-select">
+            <span>Language</span>
+            <select id="language-select">
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+            </select>
+        </label>
+    </div>
+</header>
+
+<main class="page-shell">
+
+    <section class="page-hero">
+        <p class="small-title" data-i18n="support.kicker">WE ARE HERE TO HELP</p>
+        <h1 data-i18n="support.title">Support</h1>
+        <p class="page-intro" data-i18n="support.intro">Antworten auf häufige Fragen, bekannte Probleme und direkte Hilfe von unserem Team.</p>
+
+        <div class="support-tabs">
+            <a href="#faq" data-i18n="support.tabFaq">FAQ</a>
+            <a href="#issues" data-i18n="support.tabIssues">Bekannte Probleme</a>
+            <a href="#help" data-i18n="support.tabHelp">Technische Hilfe</a>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="section-heading">
+            <p class="small-title" data-i18n="support.faqKicker">QUESTIONS</p>
+            <h2 data-i18n="support.faqHeading">FAQ</h2>
+        </div>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary data-i18n="support.faq1q">Wann erscheint Nature Chaos?</summary>
+                <p data-i18n="support.faq1a">Einen genauen Termin gibt es noch nicht. Neuigkeiten veröffentlichen wir im News-Bereich.</p>
+            </details>
+            <details class="faq-item">
+                <summary data-i18n="support.faq2q">Wo kann ich unsere Spiele herunterladen?</summary>
+                <p data-i18n="support.faq2a">Auf der Downloads-Seite. Dort steht aktuell noch Coming Soon, sobald es etwas gibt, findest du es dort.</p>
+            </details>
+            <details class="faq-item">
+                <summary data-i18n="support.faq3q">Wie erreiche ich das Team?</summary>
+                <p data-i18n="support.faq3a">Nutze das Kontaktformular weiter unten oder schreibe uns direkt per E-Mail.</p>
+            </details>
+            <details class="faq-item">
+                <summary data-i18n="support.faq4q">Kostet die Nutzung der Website etwas?</summary>
+                <p data-i18n="support.faq4a">Nein, die Website ist für alle kostenlos.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="section" id="issues">
+        <div class="section-heading">
+            <p class="small-title" data-i18n="support.issuesKicker">STATUS</p>
+            <h2 data-i18n="support.issuesHeading">Bekannte Probleme</h2>
+        </div>
+
+        <div class="info-box">
+            <strong data-i18n="support.issuesNone">Aktuell sind keine bekannten Probleme gemeldet.</strong>
+            <p data-i18n="support.issuesText">Falls dir etwas auffällt, melde es uns gern über das Formular unten.</p>
+        </div>
+    </section>
+
+    <section class="section" id="help">
+        <div class="section-heading">
+            <p class="small-title" data-i18n="support.helpKicker">CONTACT</p>
+            <h2 data-i18n="support.helpHeading">Technische Hilfe</h2>
+            <p data-i18n="support.helpText">Beschreibe dein Anliegen so genau wie möglich. Deine Nachricht kommt direkt bei unserem Team an.</p>
+        </div>
+
+        <form class="form-card" id="support-form">
+            <input type="hidden" name="_subject" value="Neue Support-Anfrage - BaNaNa Studios">
+            <input type="hidden" name="_cc" value="bananastudiosofficalde@proton.me">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="hp-field" aria-hidden="true">
+                <label>Nicht ausfüllen <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <div class="form-row">
+                <label for="f-name" data-i18n="support.formName">Name</label>
+                <input type="text" id="f-name" name="name" required maxlength="100" autocomplete="name">
+            </div>
+
+            <div class="form-row">
+                <label for="f-email" data-i18n="support.formEmail">Deine E-Mail-Adresse</label>
+                <input type="email" id="f-email" name="email" required maxlength="150" autocomplete="email">
+            </div>
+
+            <div class="form-row">
+                <label for="f-category" data-i18n="support.formCategory">Kategorie</label>
+                <select id="f-category" name="Kategorie" required>
+                    <option value="Technische Hilfe" data-i18n="support.catTech">Technische Hilfe</option>
+                    <option value="Fehler melden" data-i18n="support.catBug">Fehler melden</option>
+                    <option value="Download-Problem" data-i18n="support.catDownload">Download-Problem</option>
+                    <option value="Frage zu den Spielen" data-i18n="support.catGame">Frage zu den Spielen</option>
+                    <option value="Sonstiges" data-i18n="support.catOther">Sonstiges</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="f-message" data-i18n="support.formMessage">Beschreibung</label>
+                <textarea id="f-message" name="message" required minlength="10" maxlength="3000"></textarea>
+            </div>
+
+            <button type="submit" class="button primary" id="f-submit" data-i18n="support.formSend">Nachricht senden</button>
+            <p class="form-status" id="form-status" role="status"></p>
+            <p class="form-hint" data-i18n="support.formHint">Mit dem Absenden stimmst du zu, dass wir deine Angaben nur zur Beantwortung deiner Anfrage verwenden.</p>
+        </form>
+
+        <div class="info-box" style="margin-top:24px;">
+            <strong data-i18n="support.mailTitle">Lieber direkt per E-Mail?</strong>
+            <div class="contact-mails">
+                <a href="mailto:bananastudiosofficalde@mail.de">bananastudiosofficalde@mail.de</a>
+                <a href="mailto:bananastudiosofficalde@proton.me">bananastudiosofficalde@proton.me</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="logo">BaNaNa <span>Studios</span></a>
+    <p>BaNaNa Studios</p>
+    <p>Official Website</p>
+    <p>bananastudios.de</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    const supportForm = document.getElementById("support-form");
+    const statusBox = document.getElementById("form-status");
+    const submitButton = document.getElementById("f-submit");
+
+    function setStatus(key, type) {
+        statusBox.textContent = translate(key, document.documentElement.lang);
+        statusBox.className = "form-status " + (type || "");
+    }
+
+    supportForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        submitButton.disabled = true;
+        setStatus("support.formSending", "");
+
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/bananastudiosofficalde@mail.de", {
+                method: "POST",
+                headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                body: JSON.stringify(Object.fromEntries(new FormData(supportForm)))
+            });
+            const data = await response.json();
+
+            if (response.ok && (data.success === true || data.success === "true")) {
+                supportForm.reset();
+                setStatus("support.formSuccess", "ok");
+            } else {
+                throw new Error("send failed");
+            }
+        } catch (error) {
+            setStatus("support.formError", "err");
+        } finally {
+            submitButton.disabled = false;
+        }
+    });
+</script>
+</body>
+</html>
