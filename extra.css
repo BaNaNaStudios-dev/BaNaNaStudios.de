@@ -181,3 +181,98 @@ button.button:disabled {
 .coming-soon-box p {
     color: var(--muted);
 }
+
+/* =========================
+   NEWS (eigene Seite pro News)
+========================= */
+
+/* Sprachumschaltung ohne JavaScript-Texte: Das Skript setzt <html lang="de|en"> */
+html[lang="de"] [data-lang="en"] { display: none !important; }
+html[lang="en"] [data-lang="de"] { display: none !important; }
+
+.news-link {
+    display: block;
+    padding: 26px 28px;
+}
+
+.news-link h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.article-container h1 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.05;
+}
+
+.article-container .article-date {
+    margin-bottom: 0;
+}
+
+.article-content h2 {
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    margin: 32px 0 10px;
+}
+
+.article-content ul.feature-list {
+    margin: 14px 0 22px;
+}
+
+.article-content strong {
+    color: var(--text);
+}
+
+/* =========================
+   DOWNLOADS: App-Karte
+========================= */
+
+.app-card {
+    max-width: 820px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+}
+
+.app-card .app-icon {
+    width: 140px;
+    height: 140px;
+    margin: 28px auto;
+    border-radius: 28px;
+    object-fit: cover;
+}
+
+.steps-title {
+    margin-top: 28px;
+    font-size: 16px;
+}
+
+.steps-list {
+    margin: 10px 0 0 20px;
+    color: var(--muted);
+}
+
+.steps-list li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 640px) {
+    .app-card {
+        grid-template-columns: 1fr;
+    }
+
+    .app-card .app-icon {
+        margin: 28px auto 0;
+    }
+}
+
+.download-meta {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+}
+
+.download-list-note {
+    color: var(--muted);
+}
