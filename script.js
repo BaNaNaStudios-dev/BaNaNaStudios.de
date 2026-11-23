@@ -86,11 +86,17 @@ const translations = {
         downloads: {
             kicker: "GET OUR GAMES",
             title: "Downloads",
-            intro: "Soon you will find all downloads from BaNaNa Studios here.",
+            intro: "Here you will find all downloads from BaNaNa Studios.",
             tag: "DOWNLOADS",
             soon: "COMING SOON",
             text: "There is nothing to download yet. Check back soon.",
-            link: "Go to news →"
+            link: "Go to news →",
+            dlButton: "Download",
+            androidTitle: "How to install an Android app (APK) on your Samsung",
+            androidStep1: "Tap “Download” and save the file on your phone.",
+            androidStep2: "Open the file from the notification or in the “My Files” app.",
+            androidStep3: "When asked, allow installing from this source once and tap “Install”.",
+            androidNote: "Note: Android may show a warning for apps from outside the Play Store. Only download files from this page."
         },
         support: {
             kicker: "WE ARE HERE TO HELP",
@@ -213,11 +219,17 @@ const translations = {
         downloads: {
             kicker: "UNSERE SPIELE HERUNTERLADEN",
             title: "Downloads",
-            intro: "Hier findest du bald alle Downloads von BaNaNa Studios.",
+            intro: "Hier findest du alle Downloads von BaNaNa Studios.",
             tag: "DOWNLOADS",
             soon: "COMING SOON",
             text: "Noch gibt es nichts zum Herunterladen. Schau bald wieder vorbei.",
-            link: "Zu den News →"
+            link: "Zu den News →",
+            dlButton: "Herunterladen",
+            androidTitle: "So installierst du eine Android-App (APK) auf deinem Samsung",
+            androidStep1: "Tippe auf „Herunterladen“ und speichere die Datei auf deinem Handy.",
+            androidStep2: "Öffne die Datei über die Benachrichtigung oder die App „Eigene Dateien“.",
+            androidStep3: "Erlaube bei der Nachfrage einmalig die Installation aus dieser Quelle und tippe auf „Installieren“.",
+            androidNote: "Hinweis: Android kann bei Apps von außerhalb des Play Stores eine Warnung anzeigen. Lade nur Dateien von dieser Seite herunter."
         },
         support: {
             kicker: "WIR HELFEN DIR",
