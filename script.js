@@ -59,7 +59,9 @@ const translations = {
             cardTag: "Teaser",
             cardTitle: "Nature Chaos – Teaser #1",
             cardText: "The first teaser for Nature Chaos: a first glimpse into the world, the survival and the power of nature.",
-            watchLink: "Watch on YouTube →",
+            watchLink: "Watch →",
+            ytLink: "Watch on YouTube →",
+            backLink: "← Back to trailers",
             teaserTag: "Teaser",
             teaserTitle: "Project Echo",
             teaserText: "A moody preview of a world filled with secrets and untold risks."
@@ -189,7 +191,9 @@ const translations = {
             cardTag: "TEASER",
             cardTitle: "Nature Chaos – Teaser #1",
             cardText: "Der erste Teaser zu Nature Chaos: ein erster Blick auf die Welt, das Überleben und die Kraft der Natur.",
-            watchLink: "Auf YouTube ansehen →",
+            watchLink: "Ansehen →",
+            ytLink: "Auf YouTube ansehen →",
+            backLink: "← Zurück zu den Trailern",
             teaserTag: "Teaser",
         },
         news: {
