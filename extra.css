@@ -250,3 +250,12 @@ html[lang="en"] [data-lang="de"] { display: none !important; }
     border: 0;
     display: block;
 }
+
+/* Trailer: Liste nur mit Titel, Ansehen auf eigener Seite */
+a.trailer-link { display: block; text-decoration: none; color: inherit; transition: transform .2s ease, border-color .2s ease; }
+a.trailer-link:hover { transform: translateY(-3px); border-color: var(--accent-strong); }
+.back-link { display: inline-block; margin-bottom: 18px; color: var(--muted); font-weight: 700; text-decoration: none; }
+.back-link:hover { color: var(--accent-strong); }
+.watch-stage { display: grid; justify-items: center; gap: 20px; text-align: center; }
+.watch-stage .video-embed { max-width: 380px; }
+.watch-text { color: var(--muted); max-width: 520px; }
