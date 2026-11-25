@@ -11,15 +11,13 @@ const SOCIAL_LINKS = [
     { name: "Discord",   url: "" }    // z. B. "https://discord.gg/deincode"
 ];
 
-const NEWSLETTER_ENDPOINT = "https://formsubmit.co/ajax/bananastudiosofficalde@mail.de";
 
 const TEXT = {
     de: {
         "spot.kicker": "UNSER NÄCHSTES SPIEL", "spot.watch": "Teaser #1 ansehen",
         "spot.text": "Überlebe in der Natur: Finde Essen, achte auf deine Ausdauer und lerne Heiltechniken, um zu überleben.",
         "spot.s1": "Idee & Konzept", "spot.s2": "Programmierung", "spot.s3": "Testphase", "spot.s4": "Release 2028–2029",
-        "spot.devlog": "Zum Entwicklungs-Tagebuch", "spot.news": "Alle News",
-        "card.devTitle": "Entwicklungs-Tagebuch", "card.devText": "Schau uns beim Entwickeln zu: Fortschritt, Einblicke und kleine Updates.", "card.devLink": "Zum Tagebuch →",
+        "spot.news": "Alle News",
         "com.kicker": "COMMUNITY", "com.title": "Bleib dabei",
         "com.text": "Folge uns und erfahre als Erstes, wenn es Neuigkeiten zu Nature Chaos gibt.",
         "com.follow": "Folge uns", "com.news": "Neuigkeiten per E-Mail",
@@ -28,15 +26,13 @@ const TEXT = {
         "com.sending": "Wird gesendet …", "com.ok": "Danke! Wir haben deine Anmeldung bekommen.",
         "com.err": "Das hat leider nicht geklappt. Bitte versuche es später noch einmal.",
         "com.noSocial": "Die Links folgen bald.",
-        "dev.kicker": "HINTER DEN KULISSEN", "dev.title": "Entwicklungs-Tagebuch",
-        "dev.intro": "Hier zeigen wir, woran wir gerade arbeiten. Die neuesten Einträge stehen oben."
+
     },
     en: {
         "spot.kicker": "OUR NEXT GAME", "spot.watch": "Watch Teaser #1",
         "spot.text": "Survive in the wild: find food, watch your stamina and learn healing techniques to stay alive.",
         "spot.s1": "Idea & concept", "spot.s2": "Programming", "spot.s3": "Testing", "spot.s4": "Release 2028–2029",
-        "spot.devlog": "Open the development diary", "spot.news": "All news",
-        "card.devTitle": "Development Diary", "card.devText": "Watch us build: progress, behind-the-scenes and small updates.", "card.devLink": "Open diary →",
+        "spot.news": "All news",
         "com.kicker": "COMMUNITY", "com.title": "Stay in the loop",
         "com.text": "Follow us and be the first to know when there is news about Nature Chaos.",
         "com.follow": "Follow us", "com.news": "News by email",
@@ -45,8 +41,7 @@ const TEXT = {
         "com.sending": "Sending …", "com.ok": "Thank you! We received your subscription.",
         "com.err": "That did not work. Please try again later.",
         "com.noSocial": "Links coming soon.",
-        "dev.kicker": "BEHIND THE SCENES", "dev.title": "Development Diary",
-        "dev.intro": "Here we show what we are working on right now. The newest entries are at the top."
+
     }
 };
 
@@ -64,6 +59,8 @@ function renderSocial() {
     if (!box) return;
     box.replaceChildren();
     const active = SOCIAL_LINKS.filter(s => /^https:\/\//.test(s.url));
+    const section = document.getElementById("community");
+    if (section) section.hidden = !active.length;
     if (!active.length) {
         const p = document.createElement("p");
         p.className = "form-hint";
@@ -82,33 +79,6 @@ function renderSocial() {
     });
 }
 
-function setupNewsletter() {
-    const form = document.getElementById("newsletter-form");
-    if (!form) return;
-    const status = document.getElementById("newsletter-status");
-    const button = form.querySelector("button[type=submit]");
-    const say = (key, kind) => { status.textContent = tt(key); status.className = "form-status" + (kind ? " " + kind : ""); };
-
-    form.addEventListener("submit", async event => {
-        event.preventDefault();
-        button.disabled = true;
-        say("com.sending");
-        try {
-            const data = Object.fromEntries(new FormData(form));
-            data.message = "Newsletter-Anmeldung: " + data.email;
-            const response = await fetch(NEWSLETTER_ENDPOINT, {
-                method: "POST",
-                headers: { "Content-Type": "application/json", "Accept": "application/json" },
-                body: JSON.stringify(data)
-            });
-            const result = await response.json();
-            if (response.ok && (result.success === true || result.success === "true")) { form.reset(); say("com.ok", "ok"); }
-            else throw new Error("failed");
-        } catch (e) { say("com.err", "err"); }
-        finally { button.disabled = false; }
-    });
-}
-
 function setupStepper() {
     const stepper = document.getElementById("stepper");
     if (!stepper) return;
@@ -120,7 +90,6 @@ function setupStepper() {
 
 document.addEventListener("DOMContentLoaded", () => {
     applyTexts();
-    setupNewsletter();
     setupStepper();
     document.getElementById("language-select")?.addEventListener("change", () => setTimeout(applyTexts, 0));
 });
