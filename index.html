@@ -71,31 +71,9 @@
             <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=85" alt="Forest landscape">
         </div>
     </section>
-
-    <section class="section spotlight">
-        <div class="section-heading">
-            <p class="small-title" data-t="spot.kicker">UNSER NÄCHSTES SPIEL</p>
-            <h2>Nature Chaos</h2>
-        </div>
-
-        <div class="spotlight-grid">
-            <a href="trailer-nature-chaos-teaser.html" class="spotlight-video" aria-label="Nature Chaos – Teaser #1">
-                <span class="play-button" aria-hidden="true"></span>
-                <span class="spotlight-video-label" data-t="spot.watch">Teaser #1 ansehen</span>
-            </a>
-
-            <div class="spotlight-info">
-                <p class="spotlight-text" data-t="spot.text">Überlebe in der Natur: Finde Essen, achte auf deine Ausdauer und lerne Heiltechniken, um zu überleben.</p>
-
-                <ol class="stepper" id="stepper">
-                    <li class="done"><span class="dot"></span><span data-t="spot.s1">Idee &amp; Konzept</span></li>
-                    <li class="active"><span class="dot"></span><span data-t="spot.s2">Programmierung</span></li>
-                    <li><span class="dot"></span><span data-t="spot.s3">Testphase</span></li>
-                    <li><span class="dot"></span><span data-t="spot.s4">Release 2028–2029</span></li>
-                </ol>
-
+    
                 <div class="spotlight-buttons">
-                    <a href="devlog.html" class="button primary" data-t="spot.devlog">Zum Entwicklungs-Tagebuch</a>
+                    <a href="trailer-nature-chaos-teaser.html" class="button primary" data-t="spot.watch">Teaser #1 ansehen</a>
                     <a href="news.html" class="button secondary" data-t="spot.news">Alle News</a>
                 </div>
             </div>
@@ -109,7 +87,7 @@
             <p data-i18n="index.discoverText">Explore our latest projects and stay connected with BaNaNa Studios.</p>
         </div>
 
-        <div class="overview-grid four">
+        <div class="overview-grid">
             <a href="games.html" class="overview-card">
                 <span class="card-tag" data-i18n="index.gamesTag">GAMES</span>
                 <h3 data-i18n="index.gamesTitle">Game Overview</h3>
@@ -130,46 +108,22 @@
                 <p data-i18n="index.newsText">Follow the latest studio updates, previews and announcements.</p>
                 <span class="card-link" data-i18n="index.newsLink">Open archive →</span>
             </a>
-
-            <a href="devlog.html" class="overview-card">
-                <span class="card-tag">DEVLOG</span>
-                <h3 data-t="card.devTitle">Entwicklungs-Tagebuch</h3>
-                <p data-t="card.devText">Schau uns beim Entwickeln zu: Fortschritt, Einblicke und kleine Updates.</p>
-                <span class="card-link" data-t="card.devLink">Zum Tagebuch →</span>
-            </a>
         </div>
     </section>
 
-    <section class="section community" id="community">
+    <section class="section community" id="community" hidden>
         <div class="section-heading">
             <p class="small-title" data-t="com.kicker">COMMUNITY</p>
             <h2 data-t="com.title">Bleib dabei</h2>
             <p data-t="com.text">Folge uns und erfahre als Erstes, wenn es Neuigkeiten zu Nature Chaos gibt.</p>
         </div>
 
-        <div class="community-grid">
+        <div class="community-grid single">
             <div class="community-box">
                 <h3 data-t="com.follow">Folge uns</h3>
                 <div class="social-links" id="social-links"></div>
             </div>
 
-            <div class="community-box">
-                <h3 data-t="com.news">Neuigkeiten per E-Mail</h3>
-                <form id="newsletter-form" class="newsletter-form">
-                    <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
-                    <input type="hidden" name="_subject" value="Neue Newsletter-Anmeldung">
-                    <input type="hidden" name="_captcha" value="false">
-                    <div class="newsletter-row">
-                        <input type="email" name="email" id="newsletter-email" required maxlength="254" autocomplete="email" data-t-ph="com.placeholder" placeholder="Deine E-Mail-Adresse">
-                        <button type="submit" class="button primary" data-t="com.submit">Anmelden</button>
-                    </div>
-                    <label class="newsletter-consent">
-                        <input type="checkbox" name="consent" required>
-                        <span data-t="com.consent">Ich möchte E-Mails mit Neuigkeiten von BaNaNa Studios bekommen und kann mich jederzeit wieder abmelden.</span>
-                    </label>
-                    <p class="form-status" id="newsletter-status" role="status" aria-live="polite"></p>
-                </form>
-            </div>
         </div>
     </section>
 
