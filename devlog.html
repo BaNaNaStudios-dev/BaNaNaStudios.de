@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Development diary of BaNaNa Studios.">
+    <meta name="theme-color" content="#0f172a">
+    <title>Devlog | BaNaNa Studios</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="192x192">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo" style="display:inline-flex; align-items:center; gap:10px;"><img src="12.png" alt="BaNaNa Studios Logo" style="height:36px; width:auto; border-radius:8px;"><span style="color:inherit;">BaNaNa <span>Studios</span></span></a>
+
+    <nav class="navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="games.html" data-i18n="nav.games">Games</a>
+        <a href="trailers.html" data-i18n="nav.trailers">Trailers</a>
+        <a href="news.html" data-i18n="nav.news">News</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="downloads.html" data-i18n="nav.downloads">Downloads</a>
+        <a href="support.html" data-i18n="nav.support">Support</a>
+    </nav>
+
+    <div class="header-tools">
+        <label class="settings-select">
+            <span>Theme</span>
+            <select id="theme-select">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </label>
+
+        <label class="settings-select">
+            <span>Language</span>
+            <select id="language-select">
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+            </select>
+        </label>
+    </div>
+</header>
+
+<main class="page-shell">
+    <section class="page-hero">
+        <p class="small-title" data-t="dev.kicker">BEHIND THE SCENES</p>
+        <h1 data-t="dev.title">Entwicklungs-Tagebuch</h1>
+        <p class="page-intro" data-t="dev.intro">Hier zeigen wir, woran wir gerade arbeiten. Die neuesten Einträge stehen oben.</p>
+    </section>
+
+    <section class="section">
+        <div class="devlog-list">
+<!-- NEUER EINTRAG: Block unten kopieren und HIER (ganz oben) einfügen, dann Texte ändern.
+<article class="devlog-entry">
+    <div class="devlog-meta"><span class="card-tag">DEVLOG</span><time><span data-lang="de">Datum</span><span data-lang="en">Date</span></time></div>
+    <h3><span data-lang="de">Titel deutsch</span><span data-lang="en">Title english</span></h3>
+    <p><span data-lang="de">Text deutsch</span><span data-lang="en">Text english</span></p>
+</article>
+-->
+
+        <article class="devlog-entry">
+            <div class="devlog-meta"><span class="card-tag">TEASER</span><time><span data-lang="de">November 2026</span><span data-lang="en">November 2026</span></time></div>
+            <h3><span data-lang="de">Teaser #1 ist online</span><span data-lang="en">Teaser #1 is online</span></h3>
+            <p><span data-lang="de">Der erste Teaser zu Nature Chaos ist veröffentlicht. Du findest ihn auf der Trailer-Seite.</span><span data-lang="en">The first teaser for Nature Chaos is out. You can find it on the trailers page.</span></p>
+        </article>
+
+        <article class="devlog-entry">
+            <div class="devlog-meta"><span class="card-tag">DEVLOG</span><time><span data-lang="de">November 2026</span><span data-lang="en">November 2026</span></time></div>
+            <h3><span data-lang="de">Die Programmierung hat begonnen</span><span data-lang="en">Programming has started</span></h3>
+            <p><span data-lang="de">Die Programmierphase von Nature Chaos läuft. Wir bauen das Überleben in der Natur: Essen, Ausdauer und Heiltechniken. Erscheinen soll das Spiel voraussichtlich 2028 bis 2029.</span><span data-lang="en">The programming phase of Nature Chaos is underway. We are building survival in the wild: food, stamina and healing techniques. The game is expected to release between 2028 and 2029.</span></p>
+        </article>
+
+        <article class="devlog-entry">
+            <div class="devlog-meta"><span class="card-tag">STUDIO</span><time><span data-lang="de">2026</span><span data-lang="en">2026</span></time></div>
+            <h3><span data-lang="de">Die Website ist online</span><span data-lang="en">The website is online</span></h3>
+            <p><span data-lang="de">BaNaNa Studios hat jetzt eine eigene Website mit Games, Trailern, News und Support.</span><span data-lang="en">BaNaNa Studios now has its own website with games, trailers, news and support.</span></p>
+        </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="logo">BaNaNa <span>Studios</span></a>
+    <p>BaNaNa Studios</p>
+    <p>Official Website</p>
+    <p>bananastudios.de</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="leben.js"></script>
+</body>
+</html>
