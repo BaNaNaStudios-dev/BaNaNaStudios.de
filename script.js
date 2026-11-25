@@ -10,7 +10,6 @@ const translations = {
             games: "Games",
             trailers: "Trailers",
             news: "News",
-            devlog: "Devlog",
             about: "About",
             downloads: "Downloads",
             support: "Support"
@@ -143,7 +142,6 @@ const translations = {
             games: "Spiele",
             trailers: "Trailer",
             news: "News",
-            devlog: "Devlog",
             about: "Über uns",
             downloads: "Downloads",
             support: "Support"
@@ -273,19 +271,6 @@ const translations = {
 function translate(key, language) {
     const [group, name] = key.split(".");
     return translations[language]?.[group]?.[name] || key;
-}
-
-/* Menüpunkt "Devlog" automatisch auf jeder Seite einfügen (direkt nach News) */
-function addDevlogLink() {
-    const nav = document.querySelector(".navigation");
-    if (!nav || nav.querySelector('a[href="devlog.html"]')) return;
-    const link = document.createElement("a");
-    link.href = "devlog.html";
-    link.dataset.i18n = "nav.devlog";
-    link.textContent = "Devlog";
-    const news = nav.querySelector('a[href="news.html"]');
-    if (news && news.nextSibling) nav.insertBefore(link, news.nextSibling);
-    else nav.append(link);
 }
 
 function applyTheme(theme) {
@@ -429,7 +414,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("banana-theme") || "dark";
     const savedLanguage = localStorage.getItem("banana-language") || "de";
 
-    addDevlogLink();
     applyTheme(savedTheme);
     applyLanguage(savedLanguage);
 
